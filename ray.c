@@ -41,17 +41,14 @@ int main(void)
 {
   SDL_Init(SDL_INIT_VIDEO);
   SDL_Window* window = SDL_CreateWindow("Raytracing", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, 0);
-
-  
   SDL_Surface* surface = SDL_GetWindowSurface(window);
-  SDL_Rect Rect = (SDL_Rect) {200, 200, 500, 10};
-  SDL_FillRect(surface, &Rect, WHITE);
   
-  Circle* circleSol = initializeCircle(600, 450, 100);
+  Circle* circleSol = initializeCircle(800, 430, 100);
   drawCircle(surface, circleSol);
 
+  Circle* circlePlanet = initializeCircle(300, 550, 50);
+  drawCircle(surface, circlePlanet);
+
   SDL_UpdateWindowSurface(window);
-
-
   SDL_Delay(3000);
 }
