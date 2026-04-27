@@ -77,7 +77,7 @@ int main(void)
   SDL_Init(SDL_INIT_VIDEO);
   SDL_Window* window = SDL_CreateWindow("Raytracing", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, 0);
   SDL_Surface* surface = SDL_GetWindowSurface(window);
-  
+
   Circle* circlePlanet = initializeCircle(800, 430, 100);
   Circle* circleSol = initializeCircle(300, 550, 50);
   SDL_Rect eraser = {0, 0, WIDTH, HEIGHT};
@@ -102,6 +102,7 @@ int main(void)
 
 
 // ------------- RAY DRAWING ---------------
+
 
     for (int py = 0; py < HEIGHT; py++)
     {
